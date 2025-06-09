@@ -74,7 +74,7 @@ defmodule CatanApi.Accounts do
   end
 
   @doc """
-  Deletes a account.
+  Deletes an account.
 
   ## Examples
 

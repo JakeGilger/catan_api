@@ -7,7 +7,8 @@ defmodule CatanApi.Accounts.Account do
   schema "accounts" do
     field :email, :string
     field :hash_password, :string
-    belongs_to :account, CatanApi.Accounts.Account, type: :binary_id
+    has_one :user, CatanApi.Users.User, foreign_key: :account_id, type: :binary_id
+
     timestamps(type: :utc_datetime)
   end
 

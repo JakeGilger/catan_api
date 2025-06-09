@@ -7,6 +7,7 @@ defmodule CatanApi.Users.User do
   schema "users" do
     field :username, :string
     field :account_id, :binary_id
+    belongs_to :account, CatanApi.Accounts.Account, type: :binary_id
 
     timestamps(type: :utc_datetime)
   end
