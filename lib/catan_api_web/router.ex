@@ -9,4 +9,6 @@ defmodule CatanApiWeb.Router do
     pipe_through :api
     get "/", DefaultController, :index
   end
+
+  resources "/accounts", AccountController, except: [:new, :edit]
 end
